@@ -265,18 +265,11 @@ describe('lb4 relation HasManyThrough', /** @this {Mocha.Suite} */ function () {
         sourceModel: 'Doctor',
         destinationModel: 'Patient',
         throughModel: 'Appointment',
-        registerInclusionResolver: true,
-      },
-      {
-        relationType: 'hasManyThrough',
-        sourceModel: 'Doctor',
-        destinationModel: 'Patient',
-        throughModel: 'Appointment',
         registerInclusionResolver: false,
       },
     ];
 
-    const sourceClassNames = ['Doctor', 'Doctor', 'Doctor'];
+    const sourceClassNames = ['Doctor', 'Doctor'];
 
     promptArray.forEach(function (multiItemPrompt, i) {
       describe('answers ' + JSON.stringify(multiItemPrompt), () => {

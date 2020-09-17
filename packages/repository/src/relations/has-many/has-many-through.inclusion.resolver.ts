@@ -124,7 +124,7 @@ export function createHasManyThroughInclusionResolver<
         );
         result.push(targetEntityList);
       } else {
-        // no entities found
+        // no entities found, add undefined to results
         result.push(entityList);
       }
     }

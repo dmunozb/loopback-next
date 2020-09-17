@@ -609,7 +609,6 @@ issue](https://github.com/strongloop/loopback-next/issues/1179) to follow the di
 ## Features on the way
 
 As an experimental feature, there are some functionalities of `hasManyThrough`
-are not yet being implemented:
+that are not yet being implemented:
 
-- [inclusionResolver](https://github.com/strongloop/loopback-next/issues/5946)
 - customize `keyFrom` and/or `keyTo` for hasManyThrough

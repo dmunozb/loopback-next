@@ -151,6 +151,8 @@ export function givenBoundCrudRepositories(
   const userLinkRepoClass = createUserLinkRepo(repositoryClass);
   const userLinkRepo: UserLinkRepository = new userLinkRepoClass(db);
 
+  userRepo.inclusionResolvers.set('users', userRepo.users.inclusionResolver);
+
   return {
     customerRepo,
     orderRepo,
