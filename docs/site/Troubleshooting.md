@@ -18,10 +18,6 @@ $ npm start
 
 LoopBack 4 also provides multiple ways to help you verify or diagnose the app.
 
-allows you to specify debug strings that the application will display to the
-console (or save to a file) to help you verify or diagnose the app.
-See [Setting debug strings](Setting-debug-strings.md).
-
 ## Setting Debug Strings
 
 If you get an error but it doesn't provide enough information, you can turn on
@@ -36,7 +32,14 @@ This command prints out all the debug information from LoopBack framework. To
 only show a certain area's information, you can use more specific strings, see
 page [Setting debug strings](Setting-debug-strings.md) for details.
 
-## Debugging Binding Error
+## Running VS Code Tasks
+
+LoopBack team develops with editor Visual Studio Code in which we defined some
+tasks to help people debug their projects. Each package in the monorepo contains
+a `.vscode` folder for those tasks, see page
+[Debugging with VS Code](Debugging-with-vsc.md) for details.
+
+## Resolving Binding Error
 
 With high extensibility, a LoopBack application usually contains tens of
 bindings. A common error caused by missing bindings is "a binding key not
@@ -46,8 +49,7 @@ bound", for example:
 500 Error: The key 'services.hasher' is not bound to any value in context application
 ```
 
-The error means the binding key is not bound to a value. To fix it, you should
-set the value for the binding key in the application.
+To fix it, you should set the value for the binding key in the application.
 
 For example, go to your application, typically it is in `src/application.ts`
 file:
@@ -81,26 +83,6 @@ didn't get updated.
 To fix it, run `npm run clean` to delete all the compiled files. By doing so, it
 forces the build to generate the compiled JS files next time when you start the
 application using `npm start` or call `npm run build`.
-
-## Debugging with Visual Studio Code
-
-LoopBack team develops with editor Visual Studio Code in which we defined some
-tasks to help people debug their projects.
-
-### Debugging Packages
-
-Project `loopback-next` contains a folder `.vscode` at root level for debugging
-the test files. When start the debug task, it will stop at any breakpoint
-triggered by the tests.
-
-- Run Mocha tests: Debug all tests inside the `/packages` folder.
-- Debug Current Test File: Only debug the tests inside the current open file.
-
-### Debugging Applications and Examples
-
-Each application created by `lb4 app` contains a default "Launch Program" task
-for debugging. It's defined inside the `.vscode` folder. The example
-repositories under `loopback-next/examples` also have the same configuration.
 
 ## Leveraging Sandbox
 

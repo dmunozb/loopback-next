@@ -464,6 +464,10 @@ children:
       url: Context-explorer.html
       output: 'web, pdf'
 
+    - title: 'Debugging with VS Code'
+      url: Debugging-with-vsc.html
+      output: 'web, pdf'
+
 - title: 'Concepts'
   url: Behind-the-scene.html
   output: 'web, pdf'
