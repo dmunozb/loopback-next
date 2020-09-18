@@ -28,8 +28,10 @@
     "test": "lb-mocha \"dist/__tests__/**/*.js\"",
     "test:dev": "lb-mocha --allow-console-logs dist/__tests__/**/*.js && npm run posttest",
     "verify": "npm pack && tar xf loopback-rest-crud*.tgz && tree package && npm run clean",
-    "migrate": "npm run build && node ./dist/migrate",
-    "openapi-spec": "npm run build && node ./dist/openapi-spec",
+    "migrate": "node ./dist/migrate",
+    "premigrate": "npm run build ",
+    "openapi-spec": "node ./dist/openapi-spec",
+    "preopenapi-spec": "npm run build",
     "prestart": "npm run build",
     "start": "node ."
   },

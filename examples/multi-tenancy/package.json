@@ -27,8 +27,10 @@
     "test:dev": "lb-mocha --allow-console-logs dist/__tests__/**/*.js",
     "docker:build": "docker build -t @loopback/example-multi-tenancy .",
     "docker:run": "docker run -p 3000:3000 -d @loopback/example-multi-tenancy",
-    "migrate": "npm run build && node ./dist/migrate",
-    "openapi-spec": "npm run build && node ./dist/openapi-spec",
+    "migrate": "node ./dist/migrate",
+    "premigrate": "npm run build ",
+    "openapi-spec": "node ./dist/openapi-spec",
+    "preopenapi-spec": "npm run build",
     "prestart": "npm run build",
     "start": "node -r source-map-support/register .",
     "clean": "lb-clean dist *.tsbuildinfo .eslintcache"
