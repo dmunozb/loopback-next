@@ -37,7 +37,7 @@ page [Setting debug strings](Setting-debug-strings.md) for details.
 LoopBack team develops with editor Visual Studio Code in which we defined some
 tasks to help people debug their projects. Each package in the monorepo contains
 a `.vscode` folder for those tasks, see page
-[Debugging with VS Code](Debugging-with-vsc.md) for details.
+[Debugging with VS Code](Debugging-with-vscode.md) for details.
 
 ## Resolving Binding Error
 

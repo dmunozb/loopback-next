@@ -465,7 +465,7 @@ children:
       output: 'web, pdf'
 
     - title: 'Debugging with VS Code'
-      url: Debugging-with-vsc.html
+      url: Debugging-with-vscode.html
       output: 'web, pdf'
 
 - title: 'Concepts'
