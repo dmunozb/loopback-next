@@ -3,17 +3,17 @@
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
 
-import {ParameterLocation} from '@loopback/openapi-v3';
+import {ParameterLocation, ParameterObject} from '@loopback/openapi-v3';
 import {RestHttpErrors} from '../../../';
 import {test} from './utils';
 
-const DATETIME_PARAM = {
+const DATETIME_PARAM: ParameterObject = {
   in: <ParameterLocation>'path',
   name: 'aparameter',
   schema: {type: 'string', format: 'date-time'},
 };
 
-const REQUIRED_DATETIME_PARAM = {
+const REQUIRED_DATETIME_PARAM: ParameterObject = {
   in: <ParameterLocation>'path',
   name: 'aparameter',
   schema: {type: 'string', format: 'date-time'},

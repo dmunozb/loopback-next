@@ -99,10 +99,14 @@ export interface Count {
  * REST calls to APIs which return Count
  */
 export const CountSchema = {
-  type: 'object',
+  type: 'object' as const, // Force to be `object` type instead of `string`
   title: 'loopback.Count',
   'x-typescript-type': '@loopback/repository#Count',
-  properties: {count: {type: 'number'}},
+  properties: {
+    count: {
+      type: 'number' as const,
+    },
+  },
 };
 
 /**

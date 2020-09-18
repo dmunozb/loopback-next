@@ -1,8 +1,8 @@
+import {SchemaObject} from '@loopback/openapi-v3';
 // Copyright IBM Corp. 2019,2020. All Rights Reserved.
 // Node module: @loopback/rest
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
-
 import {
   belongsTo,
   Entity,
@@ -38,7 +38,7 @@ describe('Coercion', () => {
   });
 
   /* --------- schema defined for object query ---------- */
-  const filterSchema = {
+  const filterSchema: SchemaObject = {
     type: 'object',
     title: 'filter',
     properties: {

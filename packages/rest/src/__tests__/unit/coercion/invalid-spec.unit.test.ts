@@ -3,13 +3,14 @@
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
 
-import {ParameterLocation} from '@loopback/openapi-v3';
+import {ParameterLocation, ParameterObject} from '@loopback/openapi-v3';
 import {RestHttpErrors} from '../../../';
 import {test} from './utils';
 
-const INVALID_PARAM = {
+const INVALID_PARAM: ParameterObject = {
   in: <ParameterLocation>'unknown',
   name: 'aparameter',
+  // @ts-expect-error - TS compiler catches `unknown` as invalid
   schema: {type: 'unknown'},
 };
 

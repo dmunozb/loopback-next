@@ -3,30 +3,30 @@
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
 
-import {ParameterLocation} from '@loopback/openapi-v3';
+import {ParameterLocation, ParameterObject} from '@loopback/openapi-v3';
 import {RestHttpErrors} from '../../../';
 import {test} from './utils';
 
-const INT32_PARAM = {
+const INT32_PARAM: ParameterObject = {
   in: <ParameterLocation>'path',
   name: 'aparameter',
   schema: {type: 'integer', format: 'int32'},
 };
 
-const INT64_PARAM = {
+const INT64_PARAM: ParameterObject = {
   in: <ParameterLocation>'path',
   name: 'aparameter',
   schema: {type: 'integer', format: 'int64'},
 };
 
-const REQUIRED_INTEGER_PARAM = {
+const REQUIRED_INTEGER_PARAM: ParameterObject = {
   in: <ParameterLocation>'path',
   name: 'aparameter',
   schema: {type: 'integer'},
   required: true,
 };
 
-const INTEGER_PARAM = {
+const INTEGER_PARAM: ParameterObject = {
   in: <ParameterLocation>'path',
   name: 'aparameter',
   schema: {type: 'integer'},
