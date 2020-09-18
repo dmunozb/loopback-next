@@ -21,7 +21,7 @@
     "pretest": "npm run clean && npm run build",
     "test": "lb-mocha \"dist/__tests__/**/*.js\"",
     "test:dev": "lb-mocha --allow-console-logs dist/__tests__/**/*.js && npm run posttest",
-    "migrate": "node ./dist/migrate",
+    "migrate": "npm run build && node ./dist/migrate",
     "prestart": "npm run build",
     "start": "node ."
   },
